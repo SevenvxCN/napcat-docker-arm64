@@ -1,0 +1,48 @@
+{
+  "package": "napcat-docker (official image, local export)",
+  "exportedAt": "2026-11-17T20:48:20+08:00",
+  "exportedOn": "macOS arm64 (Apple M4)",
+  "image": {
+    "ref": "mlikiowa/napcat-docker:latest",
+    "id": "sha256:b101b8968cc31ae428ec0f8e117386e4ced7773b2d8226ed9f7ddfcec55f1b7e",
+    "digest": "mlikiowa/napcat-docker@sha256:b101b8968cc31ae428ec0f8e117386e4ced7773b2d8226ed9f7ddfcec55f1b7e",
+    "os": "linux",
+    "architecture": "arm64",
+    "builtAt": "2026-10-21T08:44:56Z",
+    "labelCreated": "2024-11-05T14:52:44Z",
+    "upstreamRepository": "https://github.com/NapNeko/NapCat-Docker",
+    "upstreamRevision": "60dc2d72126890a0ae88a36f64000c08b7b8bf7a",
+    "entrypoint": ["bash", "entrypoint.sh"],
+    "volumes": ["/app/.config/QQ", "/app/napcat/config"],
+    "containerSizeBytes": 593788584
+  },
+  "archive": {
+    "file": "napcat-docker-latest.tar.gz",
+    "format": "OCI layout (docker save, needs Docker >= 25 for `docker load`)",
+    "bytes": 593788584,
+    "sha256": "b3d49bef271e90973693e4eb4791bb25ebda0108a6e4df92a4ddd8d4f3743879"
+  },
+  "originContainer": {
+    "name": "napcat",
+    "ports": {
+      "3000/tcp": "127.0.0.1:3000",
+      "3001/tcp": "127.0.0.1:3001",
+      "6099/tcp": "127.0.0.1:6099"
+    },
+    "restart": "unless-stopped",
+    "mounts": {
+      "~/Aurabot/napcat/qq": "/app/.config/QQ",
+      "~/Aurabot/napcat/config": "/app/napcat/config"
+    },
+    "env": {
+      "ACCOUNT": "<originally set; replaced with placeholder in compose>",
+      "NAPCAT_UID": "501",
+      "NAPCAT_GID": "20",
+      "TZ": "Asia/Shanghai"
+    }
+  },
+  "notIncluded": [
+    "QQ 登录态与会话数据（~/Aurabot/napcat/qq）",
+    "NapCat 配置与 token（~/Aurabot/napcat/config，含 onebot11/webui 凭据）"
+  ]
+}
