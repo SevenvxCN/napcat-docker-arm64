@@ -20,7 +20,7 @@
 
 ```bash
 curl -L -o napcat-docker-latest.tar.gz \
-  https://github.com/<OWNER>/napcat-docker-arm64/releases/latest/download/napcat-docker-latest.tar.gz
+  https://github.com/SevenvxCN/napcat-docker-arm64/releases/latest/download/napcat-docker-latest.tar.gz
 
 shasum -a 256 napcat-docker-latest.tar.gz
 # b3d49bef271e90973693e4eb4791bb25ebda0108a6e4df92a4ddd8d4f3743879
